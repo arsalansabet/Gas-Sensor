@@ -1,0 +1,2 @@
+You must add SSID and password! These connect over your router. See what the web server IP address is on the serial monitor,
+and change it accordingly in the client code. default is 192.168.1.1 but mine was 192.168.0.167
