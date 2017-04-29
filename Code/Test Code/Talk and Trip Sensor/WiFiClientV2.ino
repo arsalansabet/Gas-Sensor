@@ -31,7 +31,9 @@ void setup() {
     Serial.println(WiFi.localIP());
 
     delay(500);
-    // prepare GPIO2
+    pinMode(4, OUTPUT);//Set GPIO4 as an input
+    digitalWrite(4, 0);
+    // prepare GPIO4
     pinMode(4, INPUT);//Set GPIO4 as an input
     delay(50);
 
