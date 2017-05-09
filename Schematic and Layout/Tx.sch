@@ -301,36 +301,36 @@ http://www.bccomponents.com/</description>
 <wire x1="-0.3175" y1="-1.61125" x2="-0.9525" y2="-1.61125" width="0.127" layer="21"/>
 </package>
 <package name="ESP">
-<pad name="P$2" x="-11.43" y="0" drill="1" shape="square"/>
-<pad name="P$3" x="-11.43" y="2.54" drill="1" shape="square"/>
-<pad name="P$4" x="-11.43" y="5.08" drill="1" shape="square"/>
-<pad name="P$5" x="-11.43" y="7.62" drill="1" shape="square"/>
-<pad name="P$6" x="-11.43" y="10.16" drill="1" shape="square"/>
-<pad name="P$7" x="-11.43" y="12.7" drill="1" shape="square"/>
-<pad name="P$8" x="-11.43" y="15.24" drill="1" shape="square"/>
-<pad name="P$9" x="-11.43" y="17.78" drill="1" shape="square"/>
-<pad name="P$10" x="11.43" y="0" drill="1" shape="square"/>
-<pad name="GND_2" x="11.43" y="2.54" drill="1" shape="square"/>
-<pad name="P$12" x="11.43" y="5.08" drill="1" shape="square"/>
-<pad name="GPIO2" x="11.43" y="7.62" drill="1" shape="square"/>
-<pad name="P$14" x="11.43" y="10.16" drill="1" shape="square"/>
-<pad name="GPIO4" x="11.43" y="12.7" drill="1" shape="square"/>
-<pad name="P$16" x="11.43" y="15.24" drill="1" shape="square"/>
-<pad name="P$17" x="11.43" y="17.78" drill="1" shape="square"/>
-<pad name="VIN" x="-11.43" y="-17.78" drill="1" shape="square"/>
-<pad name="GND_0" x="-11.43" y="-15.24" drill="1" shape="square"/>
-<pad name="P$19" x="-11.43" y="-12.7" drill="1" shape="square"/>
-<pad name="P$20" x="-11.43" y="-10.16" drill="1" shape="square"/>
-<pad name="P$21" x="-11.43" y="-7.62" drill="1" shape="square"/>
-<pad name="GND_1" x="-11.43" y="-5.08" drill="1" shape="square"/>
-<pad name="P$23" x="-11.43" y="-2.54" drill="1" shape="square"/>
-<pad name="P$24" x="11.43" y="-17.78" drill="1" shape="square"/>
-<pad name="GND_3" x="11.43" y="-15.24" drill="1" shape="square"/>
-<pad name="P$26" x="11.43" y="-12.7" drill="1" shape="square"/>
-<pad name="P$27" x="11.43" y="-10.16" drill="1" shape="square"/>
-<pad name="P$28" x="11.43" y="-7.62" drill="1" shape="square"/>
-<pad name="P$29" x="11.43" y="-5.08" drill="1" shape="square"/>
-<pad name="P$30" x="11.43" y="-2.54" drill="1" shape="square"/>
+<pad name="P$2" x="-11.43" y="0" drill="1.1" shape="square"/>
+<pad name="P$3" x="-11.43" y="2.54" drill="1.1" shape="square"/>
+<pad name="P$4" x="-11.43" y="5.08" drill="1.1" shape="square"/>
+<pad name="P$5" x="-11.43" y="7.62" drill="1.1" shape="square"/>
+<pad name="P$6" x="-11.43" y="10.16" drill="1.1" shape="square"/>
+<pad name="P$7" x="-11.43" y="12.7" drill="1.1" shape="square"/>
+<pad name="P$8" x="-11.43" y="15.24" drill="1.1" shape="square"/>
+<pad name="P$9" x="-11.43" y="17.78" drill="1.1" shape="square"/>
+<pad name="P$10" x="11.43" y="0" drill="1.1" shape="square"/>
+<pad name="GND_2" x="11.43" y="2.54" drill="1.1" shape="square"/>
+<pad name="3.3_0" x="11.43" y="5.08" drill="1.1" shape="square"/>
+<pad name="GPIO2" x="11.43" y="7.62" drill="1.1" shape="square"/>
+<pad name="P$14" x="11.43" y="10.16" drill="1.1" shape="square"/>
+<pad name="GPIO4" x="11.43" y="12.7" drill="1.1" shape="square"/>
+<pad name="P$16" x="11.43" y="15.24" drill="1.1" shape="square"/>
+<pad name="P$17" x="11.43" y="17.78" drill="1.1" shape="square"/>
+<pad name="VIN" x="-11.43" y="-17.78" drill="1.1" shape="square"/>
+<pad name="GND_0" x="-11.43" y="-15.24" drill="1.1" shape="square"/>
+<pad name="P$19" x="-11.43" y="-12.7" drill="1.1" shape="square"/>
+<pad name="P$20" x="-11.43" y="-10.16" drill="1.1" shape="square"/>
+<pad name="3.3_2" x="-11.43" y="-7.62" drill="1.1" shape="square"/>
+<pad name="GND_1" x="-11.43" y="-5.08" drill="1.1" shape="square"/>
+<pad name="P$23" x="-11.43" y="-2.54" drill="1.1" shape="square"/>
+<pad name="3.3_1" x="11.43" y="-17.78" drill="1.1" shape="square"/>
+<pad name="GND_3" x="11.43" y="-15.24" drill="1.1" shape="square"/>
+<pad name="P$26" x="11.43" y="-12.7" drill="1.1" shape="square"/>
+<pad name="P$27" x="11.43" y="-10.16" drill="1.1" shape="square"/>
+<pad name="P$28" x="11.43" y="-7.62" drill="1.1" shape="square"/>
+<pad name="P$29" x="11.43" y="-5.08" drill="1.1" shape="square"/>
+<pad name="P$30" x="11.43" y="-2.54" drill="1.1" shape="square"/>
 <wire x1="-12.7" y1="24.13" x2="12.7" y2="24.13" width="0.127" layer="21"/>
 <wire x1="-12.7" y1="-24.13" x2="12.7" y2="-24.13" width="0.127" layer="21"/>
 <wire x1="12.7" y1="24.13" x2="12.7" y2="20.32" width="0.127" layer="21"/>
@@ -698,15 +698,17 @@ http://www.bccomponents.com/</description>
 </symbol>
 <symbol name="ESP">
 <pin name="VIN" x="-7.62" y="20.32" visible="pin" length="middle"/>
-<pin name="GPIO4" x="-7.62" y="15.24" visible="pin" length="middle"/>
-<pin name="GND_0" x="-7.62" y="10.16" visible="pin" length="middle"/>
-<pin name="GND_1" x="-7.62" y="5.08" visible="pin" length="middle"/>
-<pin name="GND_2" x="-7.62" y="0" visible="pin" length="middle"/>
-<pin name="GND_3" x="-7.62" y="-5.08" visible="pin" length="middle"/>
+<pin name="GPIO4" x="-7.62" y="10.16" visible="pin" length="middle"/>
+<pin name="GND_0" x="-7.62" y="5.08" visible="pin" length="middle"/>
+<pin name="GND_1" x="-7.62" y="0" visible="pin" length="middle"/>
+<pin name="GND_2" x="-7.62" y="-5.08" visible="pin" length="middle"/>
+<pin name="GND_3" x="-7.62" y="-10.16" visible="pin" length="middle"/>
 <wire x1="-2.54" y1="25.4" x2="12.7" y2="25.4" width="0.254" layer="94"/>
-<wire x1="12.7" y1="25.4" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-10.16" x2="-2.54" y2="25.4" width="0.254" layer="94"/>
+<wire x1="12.7" y1="25.4" x2="12.7" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-20.32" x2="-2.54" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-20.32" x2="-2.54" y2="25.4" width="0.254" layer="94"/>
+<pin name="GPIO2" x="-7.62" y="15.24" visible="pin" length="middle"/>
+<pin name="3.3V" x="-7.62" y="-15.24" visible="pin" length="middle"/>
 </symbol>
 <symbol name="POTENTIOMETER">
 <pin name="1_1" x="-22.86" y="0" visible="pin" length="middle"/>
@@ -971,10 +973,12 @@ http://www.bccomponents.com/</description>
 <devices>
 <device name="" package="ESP">
 <connects>
+<connect gate="G$1" pin="3.3V" pad="3.3_1"/>
 <connect gate="G$1" pin="GND_0" pad="GND_0"/>
 <connect gate="G$1" pin="GND_1" pad="GND_1"/>
 <connect gate="G$1" pin="GND_2" pad="GND_2"/>
 <connect gate="G$1" pin="GND_3" pad="GND_3"/>
+<connect gate="G$1" pin="GPIO2" pad="GPIO2"/>
 <connect gate="G$1" pin="GPIO4" pad="GPIO4"/>
 <connect gate="G$1" pin="VIN" pad="VIN"/>
 </connects>
@@ -1228,21 +1232,21 @@ http://www.bccomponents.com/</description>
 </segment>
 <segment>
 <pinref part="U$29" gate="G$1" pin="GND_0"/>
-<wire x1="320.04" y1="78.74" x2="314.96" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="314.96" y1="78.74" x2="314.96" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="U$29" gate="G$1" pin="GND_3"/>
+<wire x1="320.04" y1="73.66" x2="314.96" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="314.96" y1="73.66" x2="314.96" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="U$29" gate="G$1" pin="GND_3"/>
 <wire x1="314.96" y1="68.58" x2="314.96" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="63.5" x2="314.96" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="58.42" x2="314.96" y2="58.42" width="0.1524" layer="91"/>
+<junction x="314.96" y="58.42"/>
+<pinref part="U$29" gate="G$1" pin="GND_2"/>
 <wire x1="320.04" y1="63.5" x2="314.96" y2="63.5" width="0.1524" layer="91"/>
 <junction x="314.96" y="63.5"/>
-<pinref part="U$29" gate="G$1" pin="GND_2"/>
+<pinref part="U$29" gate="G$1" pin="GND_1"/>
 <wire x1="320.04" y1="68.58" x2="314.96" y2="68.58" width="0.1524" layer="91"/>
 <junction x="314.96" y="68.58"/>
-<pinref part="U$29" gate="G$1" pin="GND_1"/>
-<wire x1="320.04" y1="73.66" x2="314.96" y2="73.66" width="0.1524" layer="91"/>
-<junction x="314.96" y="73.66"/>
 <pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="314.96" y1="63.5" x2="314.96" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="58.42" x2="314.96" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$30" gate="G$1" pin="3_1"/>
@@ -1480,7 +1484,7 @@ http://www.bccomponents.com/</description>
 <segment>
 <pinref part="U$27" gate="G$1" pin="1"/>
 <pinref part="U$29" gate="G$1" pin="GPIO4"/>
-<wire x1="302.26" y1="83.82" x2="320.04" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="83.82" x2="320.04" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
