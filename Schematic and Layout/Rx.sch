@@ -184,6 +184,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="0.635" y1="-1.905" x2="0.635" y2="-2.54" width="0.127" layer="21"/>
 <wire x1="0.635" y1="-1.905" x2="1.905" y2="-1.905" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="-1.905" x2="-1.905" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="R1206">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -192,6 +194,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <text x="-1.27" y="1.905" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="3.81" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="PC_1935161">
 <pad name="1" x="-2.5" y="0" drill="1.5" shape="square"/>
@@ -290,6 +294,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="0.3175" y1="-3.4925" x2="0.635" y2="-3.175" width="0.127" layer="21"/>
 <wire x1="0.635" y1="-1.905" x2="1.905" y2="-1.905" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="-1.905" x2="-1.905" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="C1206">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
@@ -298,6 +304,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <text x="-1.27" y="1.905" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="3.81" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="Z_1005">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
@@ -316,6 +324,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="0.3175" y1="-1.92875" x2="0.15875" y2="-1.92875" width="0.127" layer="21"/>
 <wire x1="0.3175" y1="-1.61125" x2="0.9525" y2="-1.61125" width="0.127" layer="21"/>
 <wire x1="-0.3175" y1="-1.61125" x2="-0.9525" y2="-1.61125" width="0.127" layer="21"/>
+<wire x1="-1.5875" y1="1.27" x2="1.5875" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.5875" y1="-1.27" x2="-1.5875" y2="-1.27" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -746,25 +756,25 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="U$2" library="Gas_Sensor_Lib_v1" deviceset="PMOS" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="U$3" library="Gas_Sensor_Lib_v1" deviceset="DIODE_1206" device=""/>
-<part name="U$4" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$5" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$6" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$7" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
+<part name="U$4" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="10K"/>
+<part name="U$5" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="100K"/>
+<part name="U$6" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
+<part name="U$7" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="100K"/>
 <part name="U$8" library="Gas_Sensor_Lib_v1" deviceset="POWER_CONN" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="U$9" library="Gas_Sensor_Lib_v1" deviceset="ESP8266" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="U$10" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$11" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
+<part name="U$10" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="100"/>
+<part name="U$11" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="10K"/>
 <part name="U$12" library="Gas_Sensor_Lib_v1" deviceset="BUTTON" device=""/>
-<part name="U$13" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device=""/>
+<part name="U$13" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="LED_12V"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="U$14" library="Gas_Sensor_Lib_v1" deviceset="CAP" device=""/>
-<part name="U$15" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$16" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
+<part name="U$14" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="470uF"/>
+<part name="U$15" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="330"/>
+<part name="U$16" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="U$17" library="Gas_Sensor_Lib_v1" deviceset="DIODE_1206" device=""/>
-<part name="U$18" library="Gas_Sensor_Lib_v1" deviceset="POWER_CONN" device=""/>
-<part name="U$20" library="Gas_Sensor_Lib_v1" deviceset="DIODE_Z_1005" device=""/>
+<part name="U$18" library="Gas_Sensor_Lib_v1" deviceset="POWER_CONN" device="" value="5V-12V"/>
+<part name="U$20" library="Gas_Sensor_Lib_v1" deviceset="DIODE_Z_1005" device="" value="15V_Z"/>
 </parts>
 <sheets>
 <sheet>

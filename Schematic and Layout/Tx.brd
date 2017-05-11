@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.005" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -20,7 +20,7 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -171,6 +171,8 @@
 <wire x1="0.3175" y1="-3.4925" x2="0.635" y2="-3.175" width="0.127" layer="21"/>
 <wire x1="0.635" y1="-1.905" x2="1.905" y2="-1.905" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="-1.905" x2="-1.905" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="C1206">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
@@ -179,6 +181,8 @@
 <text x="-1.27" y="1.905" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="3.81" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="R1206">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -187,6 +191,8 @@
 <text x="-1.27" y="1.905" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="3.81" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="DIDOE_1206">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -203,6 +209,8 @@
 <wire x1="0.635" y1="-1.905" x2="0.635" y2="-2.54" width="0.127" layer="21"/>
 <wire x1="0.635" y1="-1.905" x2="1.905" y2="-1.905" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="-1.905" x2="-1.905" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="PC_1935161">
 <pad name="1" x="-2.5" y="0" drill="1.5" shape="square"/>
@@ -308,6 +316,8 @@ http://www.bccomponents.com/</description>
 <wire x1="0.3175" y1="-1.92875" x2="0.15875" y2="-1.92875" width="0.127" layer="21"/>
 <wire x1="0.3175" y1="-1.61125" x2="0.9525" y2="-1.61125" width="0.127" layer="21"/>
 <wire x1="-0.3175" y1="-1.61125" x2="-0.9525" y2="-1.61125" width="0.127" layer="21"/>
+<wire x1="-1.5875" y1="1.27" x2="1.5875" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.5875" y1="-1.27" x2="-1.5875" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="ESP">
 <pad name="P$2" x="-11.43" y="0" drill="1.1" shape="square"/>
@@ -555,113 +565,112 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$1" library="Gas_Sensor_Lib_v1" package="LED_1206" value="LED_1206" x="46.736" y="4.851" smashed="yes" rot="R270">
-<attribute name="NAME" x="46.33" y="0.762" size="1.27" layer="25"/>
-<attribute name="VALUE" x="49.911" y="6.121" size="1.27" layer="27" rot="R270"/>
+<element name="U$1" library="Gas_Sensor_Lib_v1" package="LED_1206" value="LED_12V" x="46.736" y="4.851" smashed="yes" rot="R270">
+<attribute name="NAME" x="48.514" y="5.613" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="42.647" y="0.635" size="1.27" layer="27"/>
 </element>
-<element name="U$2" library="Gas_Sensor_Lib_v1" package="C1206" value="CAP" x="18.796" y="9.144" smashed="yes" rot="R90">
+<element name="U$2" library="Gas_Sensor_Lib_v1" package="C1206" value="470u" x="18.796" y="9.144" smashed="yes" rot="R90">
 <attribute name="NAME" x="16.002" y="7.493" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="14.986" y="7.874" size="1.27" layer="27" rot="R90"/>
+<attribute name="VALUE" x="14.478" y="7.366" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="U$3" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="33.782" y="12.7" smashed="yes" rot="R180">
-<attribute name="NAME" x="37.592" y="15.367" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="35.052" y="8.89" size="1.27" layer="27" rot="R180"/>
+<element name="U$3" library="Gas_Sensor_Lib_v1" package="R1206" value="330" x="33.782" y="12.7" smashed="yes" rot="R180">
+<attribute name="NAME" x="39.624" y="14.351" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="39.37" y="12.7" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="U$4" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="38.1" y="3.556" smashed="yes">
-<attribute name="NAME" x="37.084" y="0.635" size="1.27" layer="25"/>
-<attribute name="VALUE" x="36.83" y="7.366" size="1.27" layer="27"/>
+<element name="U$4" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="38.1" y="3.556" smashed="yes">
+<attribute name="NAME" x="36.83" y="0.762" size="1.27" layer="25"/>
+<attribute name="VALUE" x="34.163" y="0.762" size="1.27" layer="27"/>
 </element>
-<element name="U$5" library="Gas_Sensor_Lib_v1" package="DIDOE_1206" value="DIODE_1206" x="39.624" y="7.874" smashed="yes">
-<attribute name="NAME" x="37.084" y="9.398" size="1.27" layer="25"/>
-<attribute name="VALUE" x="38.354" y="11.049" size="1.27" layer="27"/>
+<element name="U$5" library="Gas_Sensor_Lib_v1" package="DIDOE_1206" value="DIODE" x="39.624" y="7.874" smashed="yes">
+<attribute name="NAME" x="38.354" y="9.144" size="1.27" layer="25"/>
 </element>
 <element name="U$6" library="Gas_Sensor_Lib_v1" package="PC_1935161" value="POWER_CONN" x="21.336" y="5.08" smashed="yes">
-<attribute name="NAME" x="20.781" y="7.421" size="1.016" layer="25"/>
+<attribute name="NAME" x="15.947" y="3.509" size="1.016" layer="25" rot="R90"/>
 </element>
 <element name="U$7" library="Gas_Sensor_Lib_v1" package="SO8" value="LM393" x="30.734" y="26.924" smashed="yes" rot="R270">
 <attribute name="NAME" x="28.829" y="30.099" size="1.27" layer="25"/>
-<attribute name="VALUE" x="28.829" y="22.479" size="1.27" layer="27"/>
+<attribute name="VALUE" x="36.957" y="22.987" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="U$8" library="Gas_Sensor_Lib_v1" package="SOT223" value="5V_REG" x="45.847" y="53.086" smashed="yes" rot="R270">
-<attribute name="NAME" x="43.207" y="48.0578" size="1.27" layer="25"/>
+<attribute name="NAME" x="47.217" y="49.2242" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="52.1262" y="55.876" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="U$9" library="Gas_Sensor_Lib_v1" package="153CLV-0405" value="CAP_POL" x="43.561" y="59.563" smashed="yes">
-<attribute name="NAME" x="45.131" y="61.662" size="1.27" layer="25"/>
-<attribute name="VALUE" x="41.286" y="55.828" size="1.27" layer="27"/>
+<element name="U$9" library="Gas_Sensor_Lib_v1" package="153CLV-0405" value="10uF" x="43.561" y="59.563" smashed="yes">
+<attribute name="NAME" x="35.479" y="61.916" size="1.27" layer="25"/>
+<attribute name="VALUE" x="40.27" y="61.67" size="1.27" layer="27"/>
 </element>
-<element name="U$10" library="Gas_Sensor_Lib_v1" package="153CLV-0405" value="CAP_POL" x="45.466" y="45.339" smashed="yes" rot="R180">
+<element name="U$10" library="Gas_Sensor_Lib_v1" package="153CLV-0405" value="10uF" x="45.466" y="45.339" smashed="yes" rot="R180">
 <attribute name="NAME" x="48.341" y="42.351" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="47.741" y="49.074" size="1.27" layer="27" rot="R180"/>
+<attribute name="VALUE" x="49.519" y="40.692" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="U$11" library="Gas_Sensor_Lib_v1" package="LED_1206" value="LED_1206" x="38.354" y="32.258" smashed="yes" rot="R90">
-<attribute name="NAME" x="36.449" y="31.877" size="1.27" layer="25" rot="R90"/>
+<element name="U$11" library="Gas_Sensor_Lib_v1" package="LED_1206" value="LED_5V" x="38.354" y="32.258" smashed="yes" rot="R90">
+<attribute name="NAME" x="37.084" y="30.988" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="35.179" y="30.988" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="U$12" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="38.354" y="37.084" smashed="yes" rot="R270">
-<attribute name="NAME" x="35.179" y="40.259" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="42.164" y="38.354" size="1.27" layer="27" rot="R270"/>
+<element name="U$12" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="38.354" y="37.084" smashed="yes" rot="R270">
+<attribute name="NAME" x="34.29" y="39.751" size="1.27" layer="25"/>
+<attribute name="VALUE" x="38.862" y="39.878" size="1.27" layer="27"/>
 </element>
 <element name="U$13" library="Gas_Sensor_Lib_v1" package="MQ_GAS" value="MQ" x="29.177" y="51.75" smashed="yes" rot="R180"/>
 <element name="U$14" library="Gas_Sensor_Lib_v1" package="SOT23" value="PNP" x="18.796" y="31.242" smashed="yes">
-<attribute name="NAME" x="17.526" y="32.639" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="16.791" y="34.617" size="1.27" layer="27"/>
+<attribute name="NAME" x="14.478" y="30.861" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="16.183" y="30.761" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="U$15" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="22.86" y="26.162" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.97" y="29.718" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="19.05" y="24.892" size="1.27" layer="27" rot="R90"/>
+<element name="U$15" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="22.86" y="26.162" smashed="yes" rot="R90">
+<attribute name="NAME" x="25.146" y="24.13" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="21.59" y="24.13" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="U$16" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="13.97" y="52.578" smashed="yes" rot="R270">
+<element name="U$16" library="Gas_Sensor_Lib_v1" package="R1206" value="5.1" x="13.97" y="52.578" smashed="yes" rot="R270">
 <attribute name="NAME" x="15.875" y="53.848" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="17.78" y="53.848" size="1.27" layer="27" rot="R270"/>
+<attribute name="VALUE" x="11.43" y="53.34" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="U$17" library="Gas_Sensor_Lib_v1" package="C1206" value="CAP" x="27.94" y="14.732" smashed="yes" rot="R180">
-<attribute name="NAME" x="29.21" y="12.827" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="29.21" y="10.922" size="1.27" layer="27" rot="R180"/>
+<element name="U$17" library="Gas_Sensor_Lib_v1" package="C1206" value="100nF" x="27.94" y="14.732" smashed="yes" rot="R180">
+<attribute name="NAME" x="28.194" y="13.335" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="25.146" y="13.208" size="0.8128" layer="27" rot="R90"/>
 </element>
-<element name="U$18" library="Gas_Sensor_Lib_v1" package="C1206" value="CAP" x="18.796" y="16.764" smashed="yes" rot="R90">
+<element name="U$18" library="Gas_Sensor_Lib_v1" package="C1206" value="100nF" x="18.796" y="16.764" smashed="yes" rot="R90">
 <attribute name="NAME" x="16.891" y="15.494" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="14.986" y="15.494" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="U$19" library="Gas_Sensor_Lib_v1" package="LED_1206" value="LED_1206" x="27.432" y="18.288" smashed="yes" rot="R180">
-<attribute name="NAME" x="26.67" y="15.367" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="28.702" y="15.113" size="1.27" layer="27" rot="R180"/>
+<element name="U$19" library="Gas_Sensor_Lib_v1" package="LED_1206" value="LED_GAS" x="27.432" y="18.288" smashed="yes" rot="R180">
+<attribute name="NAME" x="28.702" y="17.018" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="34.036" y="23.495" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="U$20" library="Gas_Sensor_Lib_v1" package="Z_1005" value="DIODE_Z_1005" x="32.258" y="9.652" smashed="yes" rot="R270">
-<attribute name="NAME" x="33.593" y="10.787" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="34.998" y="10.787" size="1.27" layer="27" rot="R270"/>
+<element name="U$20" library="Gas_Sensor_Lib_v1" package="Z_1005" value="15V_Z" x="32.258" y="9.652" smashed="yes" rot="R270">
+<attribute name="NAME" x="30.107" y="4.383" size="1.27" layer="25"/>
+<attribute name="VALUE" x="30.107" y="5.788" size="1.27" layer="27"/>
 </element>
-<element name="U$21" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="32.385" y="18.288" smashed="yes" rot="R180">
+<element name="U$21" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="32.385" y="18.288" smashed="yes" rot="R180">
 <attribute name="NAME" x="34.29" y="21.082" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="33.655" y="14.478" size="1.27" layer="27" rot="R180"/>
+<attribute name="VALUE" x="32.639" y="17.018" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="U$22" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="18.542" y="27.686" smashed="yes" rot="R180">
-<attribute name="NAME" x="20.828" y="26.416" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="19.812" y="23.876" size="1.27" layer="27" rot="R180"/>
+<element name="U$22" library="Gas_Sensor_Lib_v1" package="R1206" value="100K" x="18.542" y="27.686" smashed="yes" rot="R180">
+<attribute name="NAME" x="14.732" y="29.464" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="12.954" y="29.464" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="U$23" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="18.542" y="23.114" smashed="yes" rot="R90">
-<attribute name="NAME" x="15.367" y="21.082" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="14.732" y="21.844" size="1.27" layer="27" rot="R90"/>
+<element name="U$23" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="18.542" y="23.114" smashed="yes" rot="R90">
+<attribute name="NAME" x="16.637" y="21.082" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="14.986" y="22.098" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="U$24" library="Gas_Sensor_Lib_v1" package="C1206" value="CAP" x="24.892" y="33.02" smashed="yes" rot="R90">
+<element name="U$24" library="Gas_Sensor_Lib_v1" package="C1206" value="1uF" x="24.892" y="33.02" smashed="yes" rot="R90">
 <attribute name="NAME" x="27.432" y="32.258" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="21.082" y="31.75" size="1.27" layer="27" rot="R90"/>
+<attribute name="VALUE" x="23.114" y="30.988" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="U$25" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="18.796" y="37.973" smashed="yes" rot="R270">
-<attribute name="NAME" x="21.336" y="40.132" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="22.606" y="39.243" size="1.27" layer="27" rot="R270"/>
+<element name="U$25" library="Gas_Sensor_Lib_v1" package="R1206" value="?" x="18.796" y="37.973" smashed="yes" rot="R270">
+<attribute name="NAME" x="21.082" y="40.132" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="19.939" y="36.576" size="1.27" layer="27"/>
 </element>
-<element name="U$26" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="15.113" y="41.783" smashed="yes">
+<element name="U$26" library="Gas_Sensor_Lib_v1" package="R1206" value="?" x="15.113" y="41.783" smashed="yes">
 <attribute name="NAME" x="13.843" y="43.688" size="1.27" layer="25"/>
 <attribute name="VALUE" x="13.843" y="45.593" size="1.27" layer="27"/>
 </element>
-<element name="U$27" library="Gas_Sensor_Lib_v1" package="R1206" value="RES" x="23.495" y="38.227" smashed="yes" rot="R180">
-<attribute name="NAME" x="26.67" y="40.64" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="24.765" y="34.417" size="1.27" layer="27" rot="R180"/>
+<element name="U$27" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="23.495" y="38.227" smashed="yes" rot="R180">
+<attribute name="NAME" x="26.924" y="40.894" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="24.511" y="36.957" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="U$28" library="Gas_Sensor_Lib_v1" package="DIDOE_1206" value="DIODE_1206" x="13.716" y="37.846" smashed="yes" rot="R270">
 <attribute name="NAME" x="14.986" y="39.116" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="16.891" y="39.116" size="1.27" layer="27" rot="R270"/>
+<attribute name="VALUE" x="9.525" y="39.878" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="U$29" library="Gas_Sensor_Lib_v1" package="ESP" value="ESP8266" x="62.865" y="24.384" smashed="yes"/>
 <element name="U$30" library="Gas_Sensor_Lib_v1" package="POTENTIOMETER" value="POTENTIOMETER" x="5.842" y="31.496" smashed="yes" rot="R90"/>
@@ -911,7 +920,10 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="52.451" y1="46.609" x2="56.515" y2="46.609" width="0.8128" layer="16"/>
 <via x="56.515" y="46.609" extent="1-16" drill="1.1" shape="square"/>
 <wire x1="56.515" y1="46.609" x2="64.77" y2="46.609" width="0.8128" layer="1"/>
-<wire x1="64.77" y1="46.609" x2="74.295" y2="37.084" width="0.8128" layer="1"/>
+<wire x1="71.374" y1="40.005" x2="64.77" y2="46.609" width="0.8128" layer="1"/>
+<wire x1="74.295" y1="37.084" x2="74.295" y2="37.465" width="0.8128" layer="1"/>
+<wire x1="74.295" y1="37.465" x2="72.517" y2="37.465" width="0.8128" layer="1"/>
+<wire x1="72.517" y1="37.465" x2="71.374" y2="40.005" width="0.8128" layer="1"/>
 </signal>
 <signal name="N$15">
 <contactref element="U$13" pad="6"/>

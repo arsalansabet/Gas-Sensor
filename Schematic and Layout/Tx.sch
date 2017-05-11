@@ -162,6 +162,8 @@
 <wire x1="0.3175" y1="-3.4925" x2="0.635" y2="-3.175" width="0.127" layer="21"/>
 <wire x1="0.635" y1="-1.905" x2="1.905" y2="-1.905" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="-1.905" x2="-1.905" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="C1206">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
@@ -170,6 +172,8 @@
 <text x="-1.27" y="1.905" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="3.81" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="R1206">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -178,6 +182,8 @@
 <text x="-1.27" y="1.905" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="3.81" size="1.27" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="DIDOE_1206">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -194,6 +200,8 @@
 <wire x1="0.635" y1="-1.905" x2="0.635" y2="-2.54" width="0.127" layer="21"/>
 <wire x1="0.635" y1="-1.905" x2="1.905" y2="-1.905" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="-1.905" x2="-1.905" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="1.905" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="-1.905" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="PC_1935161">
 <pad name="1" x="-2.5" y="0" drill="1.5" shape="square"/>
@@ -299,6 +307,8 @@ http://www.bccomponents.com/</description>
 <wire x1="0.3175" y1="-1.92875" x2="0.15875" y2="-1.92875" width="0.127" layer="21"/>
 <wire x1="0.3175" y1="-1.61125" x2="0.9525" y2="-1.61125" width="0.127" layer="21"/>
 <wire x1="-0.3175" y1="-1.61125" x2="-0.9525" y2="-1.61125" width="0.127" layer="21"/>
+<wire x1="-1.5875" y1="1.27" x2="1.5875" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.5875" y1="-1.27" x2="-1.5875" y2="-1.27" width="0.127" layer="21"/>
 </package>
 <package name="ESP">
 <pad name="P$2" x="-11.43" y="0" drill="1.1" shape="square"/>
@@ -1068,41 +1078,41 @@ http://www.bccomponents.com/</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device=""/>
+<part name="U$1" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="LED_12V"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="U$2" library="Gas_Sensor_Lib_v1" deviceset="CAP" device=""/>
-<part name="U$3" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$4" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$5" library="Gas_Sensor_Lib_v1" deviceset="DIODE_1206" device=""/>
+<part name="U$2" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="470u"/>
+<part name="U$3" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="330"/>
+<part name="U$4" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
+<part name="U$5" library="Gas_Sensor_Lib_v1" deviceset="DIODE_1206" device="" value="DIODE"/>
 <part name="U$6" library="Gas_Sensor_Lib_v1" deviceset="POWER_CONN" device=""/>
 <part name="U$7" library="Gas_Sensor_Lib_v1" deviceset="LM393" device=""/>
 <part name="U$8" library="Gas_Sensor_Lib_v1" deviceset="5V_REG" device=""/>
-<part name="U$9" library="Gas_Sensor_Lib_v1" deviceset="CAP_POL" device=""/>
-<part name="U$10" library="Gas_Sensor_Lib_v1" deviceset="CAP_POL" device=""/>
+<part name="U$9" library="Gas_Sensor_Lib_v1" deviceset="CAP_POL" device="" value="10uF"/>
+<part name="U$10" library="Gas_Sensor_Lib_v1" deviceset="CAP_POL" device="" value="10uF"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="U$11" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device=""/>
-<part name="U$12" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
+<part name="U$11" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="LED_5V"/>
+<part name="U$12" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="U$13" library="Gas_Sensor_Lib_v1" deviceset="MQ" device=""/>
 <part name="U$14" library="Gas_Sensor_Lib_v1" deviceset="PNP" device=""/>
-<part name="U$15" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
+<part name="U$15" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="U$16" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
+<part name="U$16" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="5.1"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="U$17" library="Gas_Sensor_Lib_v1" deviceset="CAP" device=""/>
+<part name="U$17" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="100nF"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="U$18" library="Gas_Sensor_Lib_v1" deviceset="CAP" device=""/>
-<part name="U$19" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device=""/>
-<part name="U$20" library="Gas_Sensor_Lib_v1" deviceset="DIODE_Z_1005" device=""/>
-<part name="U$21" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
+<part name="U$18" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="100nF"/>
+<part name="U$19" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="LED_GAS"/>
+<part name="U$20" library="Gas_Sensor_Lib_v1" deviceset="DIODE_Z_1005" device="" value="15V_Z"/>
+<part name="U$21" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="U$22" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$23" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$24" library="Gas_Sensor_Lib_v1" deviceset="CAP" device=""/>
-<part name="U$25" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$26" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
-<part name="U$27" library="Gas_Sensor_Lib_v1" deviceset="RES" device=""/>
+<part name="U$22" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="100K"/>
+<part name="U$23" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
+<part name="U$24" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="1uF"/>
+<part name="U$25" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="?"/>
+<part name="U$26" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="?"/>
+<part name="U$27" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="U$28" library="Gas_Sensor_Lib_v1" deviceset="DIODE_1206" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="U$29" library="Gas_Sensor_Lib_v1" deviceset="ESP8266" device=""/>
