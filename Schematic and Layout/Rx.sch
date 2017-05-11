@@ -769,12 +769,15 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="U$12" library="Gas_Sensor_Lib_v1" deviceset="BUTTON" device=""/>
 <part name="U$13" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="LED_12V"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="U$14" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="470uF"/>
+<part name="U$14" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="10uF"/>
 <part name="U$15" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="330"/>
 <part name="U$16" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="U$17" library="Gas_Sensor_Lib_v1" deviceset="DIODE_1206" device=""/>
 <part name="U$18" library="Gas_Sensor_Lib_v1" deviceset="POWER_CONN" device="" value="5V-12V"/>
 <part name="U$20" library="Gas_Sensor_Lib_v1" deviceset="DIODE_Z_1005" device="" value="15V_Z"/>
+<part name="U$19" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="OUT_LED"/>
+<part name="U$21" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
+<part name="GND5" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -804,6 +807,9 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <instance part="U$17" gate="G$1" x="-35.56" y="60.96" rot="R90"/>
 <instance part="U$18" gate="G$1" x="-73.66" y="55.88"/>
 <instance part="U$20" gate="G$1" x="-43.18" y="55.88" rot="R180"/>
+<instance part="U$19" gate="G$1" x="63.5" y="20.32"/>
+<instance part="U$21" gate="G$1" x="63.5" y="7.62" rot="R90"/>
+<instance part="GND5" gate="1" x="63.5" y="-2.54"/>
 </instances>
 <busses>
 </busses>
@@ -880,6 +886,11 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="-68.58" y1="53.34" x2="-68.58" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="38.1" x2="-58.42" y2="38.1" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$21" gate="G$1" pin="1"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="63.5" y1="2.54" x2="63.5" y2="0" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$3" class="0">
 <segment>
@@ -913,6 +924,10 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <pinref part="U$8" gate="G$1" pin="1"/>
 <wire x1="88.9" y1="27.94" x2="101.6" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="27.94" x2="101.6" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="U$19" gate="G$1" pin="HI"/>
+<wire x1="63.5" y1="22.86" x2="63.5" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
+<junction x="76.2" y="25.4"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -927,9 +942,9 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <segment>
 <pinref part="U$9" gate="G$1" pin="GPIO2"/>
 <wire x1="15.24" y1="20.32" x2="30.48" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="20.32" x2="30.48" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="-5.08" x2="111.76" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="-5.08" x2="111.76" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="20.32" x2="30.48" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="-10.16" x2="111.76" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-10.16" x2="111.76" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="U$11" gate="G$1" pin="2"/>
 <wire x1="38.1" y1="63.5" x2="111.76" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="63.5" x2="38.1" y2="68.58" width="0.1524" layer="91"/>
@@ -1020,6 +1035,13 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <pinref part="U$20" gate="G$1" pin="HI"/>
 <pinref part="U$15" gate="G$1" pin="2"/>
 <wire x1="-43.18" y1="53.34" x2="-43.18" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U$19" gate="G$1" pin="LO"/>
+<pinref part="U$21" gate="G$1" pin="2"/>
+<wire x1="63.5" y1="15.24" x2="63.5" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

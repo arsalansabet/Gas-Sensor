@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.0125" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.00625" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -145,7 +145,14 @@
 <wire x1="44.45" y1="80.01" x2="0" y2="80.01" width="0" layer="20"/>
 <wire x1="0" y1="80.01" x2="0" y2="0" width="0" layer="20"/>
 <text x="0.6985" y="12.573" size="1.778" layer="21" rot="R270">12V_VIN</text>
-<text x="3.7465" y="51.8795" size="1.778" layer="21">LOAD</text>
+<text x="9.49325" y="47.21225" size="1.778" layer="21" rot="R270">LOAD</text>
+<text x="0.15875" y="77.94625" size="1.778" layer="21">RESET</text>
+<text x="38.4175" y="29.21" size="1.778" layer="22" rot="MR270">RECEIVER - RX
+CAPSTONE SPRING 2017</text>
+<text x="32.54375" y="9.68375" size="1.778" layer="22" rot="MR270">Alec
+Arsalan
+Kam
+Noah</text>
 </plain>
 <libraries>
 <library name="Gas_Sensor_Lib_v1">
@@ -565,9 +572,9 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="6.0325" y="30.1625" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="1.905" y="22.225" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="U$14" library="Gas_Sensor_Lib_v1" package="C1206" value="470uF" x="14.097" y="16.383" smashed="yes" rot="R90">
-<attribute name="NAME" x="16.002" y="13.7795" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="16.637" y="12.192" size="1.27" layer="27" rot="R180"/>
+<element name="U$14" library="Gas_Sensor_Lib_v1" package="C1206" value="10uF" x="7.33425" y="10.82675" smashed="yes">
+<attribute name="NAME" x="11.08075" y="9.398" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="12.66825" y="9.23925" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="U$15" library="Gas_Sensor_Lib_v1" package="R1206" value="330" x="9.0805" y="22.86" smashed="yes" rot="R270">
 <attribute name="NAME" x="10.9855" y="24.13" size="1.27" layer="25" rot="R270"/>
@@ -581,8 +588,16 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="14.6135" y="3.255" size="1.016" layer="25" rot="R90"/>
 </element>
 <element name="U$20" library="Gas_Sensor_Lib_v1" package="Z_1005" value="15V_Z" x="9.144" y="16.129" smashed="yes" rot="R270">
-<attribute name="NAME" x="7.1835" y="11.114" size="1.27" layer="25"/>
-<attribute name="VALUE" x="6.5485" y="12.519" size="1.27" layer="27"/>
+<attribute name="NAME" x="13.49225" y="14.32725" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="11.9285" y="14.32725" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="U$19" library="Gas_Sensor_Lib_v1" package="LED_1206" value="OUT_LED" x="6.985" y="55.245" smashed="yes" rot="R180">
+<attribute name="NAME" x="8.5725" y="60.325" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="10.95375" y="53.18125" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="U$21" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="2.54" y="56.67375" smashed="yes" rot="R270">
+<attribute name="NAME" x="1.27" y="61.11875" size="1.27" layer="25"/>
+<attribute name="VALUE" x="1.27" y="59.53125" size="1.27" layer="27"/>
 </element>
 </elements>
 <signals>
@@ -621,6 +636,7 @@ Please make sure your boards conform to these design rules.</description>
 <vertex x="0" y="0"/>
 </polygon>
 <contactref element="U$8" pad="2"/>
+<contactref element="U$21" pad="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="U$1" pad="3"/>
@@ -641,8 +657,9 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$6">
 <contactref element="U$2" pad="4"/>
 <contactref element="U$3" pad="2"/>
-<wire x1="12.852" y1="51.664" x2="12.852" y2="58.4835" width="1.4224" layer="1"/>
+<wire x1="12.852" y1="55.40375" x2="12.852" y2="51.664" width="1.4224" layer="1"/>
 <via x="14.6685" y="49.8475" extent="1-16" drill="1" shape="square"/>
+<wire x1="12.852" y1="55.40375" x2="12.852" y2="58.4835" width="1.4224" layer="1"/>
 <wire x1="14.6685" y1="49.8475" x2="17.272" y2="47.244" width="1.4224" layer="16"/>
 <wire x1="17.272" y1="47.244" x2="33.4645" y2="47.244" width="1.4224" layer="16"/>
 <wire x1="33.4645" y1="47.244" x2="33.528" y2="47.3075" width="1.4224" layer="16"/>
@@ -653,7 +670,11 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="12.852" y1="51.664" x2="14.6685" y2="49.8475" width="1.4224" layer="1"/>
 <contactref element="U$8" pad="1"/>
 <wire x1="12.852" y1="48.601" x2="5.08" y2="48.601" width="1.4224" layer="1"/>
-<wire x1="12.852" y1="58.4835" x2="12.852" y2="48.601" width="1.4224" layer="1"/>
+<wire x1="12.852" y1="58.4835" x2="12.852" y2="55.40375" width="1.4224" layer="1"/>
+<contactref element="U$19" pad="1"/>
+<wire x1="12.852" y1="55.40375" x2="12.852" y2="48.601" width="1.4224" layer="1"/>
+<wire x1="8.407" y1="55.245" x2="12.852" y2="55.245" width="1.4224" layer="1"/>
+<wire x1="12.852" y1="55.245" x2="12.852" y2="55.40375" width="1.4224" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="U$9" pad="GPIO4"/>
@@ -705,10 +726,12 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U$20" pad="2"/>
 <contactref element="U$17" pad="1"/>
 <wire x1="5.755" y1="5.0165" x2="3.7465" y2="5.08" width="1.4224" layer="1"/>
-<wire x1="3.7465" y1="5.08" x2="3.81" y2="15.088" width="1.4224" layer="1"/>
+<wire x1="3.7837875" y1="10.9569375" x2="3.7465" y2="5.08" width="1.4224" layer="1"/>
+<wire x1="3.7837875" y1="10.9569375" x2="3.81" y2="15.088" width="1.4224" layer="1"/>
 <wire x1="3.81" y1="15.088" x2="9.144" y2="15.088" width="1.4224" layer="1"/>
 <wire x1="9.144" y1="15.088" x2="9.144" y2="15.129" width="1.4224" layer="1"/>
-<wire x1="9.144" y1="15.129" x2="14.097" y2="14.983" width="1.4224" layer="1"/>
+<wire x1="5.93425" y1="10.82675" x2="3.7837875" y2="10.82675" width="1.6764" layer="1"/>
+<wire x1="3.7837875" y1="10.82675" x2="3.7837875" y2="10.9569375" width="1.6764" layer="1"/>
 </signal>
 <signal name="12V">
 <contactref element="U$17" pad="2"/>
@@ -747,7 +770,19 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U$15" pad="2"/>
 <wire x1="9.0805" y1="21.438" x2="9.144" y2="17.129" width="1.4224" layer="1"/>
 </signal>
+<signal name="N$5">
+<contactref element="U$19" pad="2"/>
+<contactref element="U$21" pad="2"/>
+<wire x1="5.563" y1="55.245" x2="2.54" y2="55.245" width="1.4224" layer="1"/>
+<wire x1="2.54" y1="55.245" x2="2.54" y2="55.25175" width="1.4224" layer="1"/>
+</signal>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

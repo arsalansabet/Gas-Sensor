@@ -147,6 +147,12 @@
 <text x="5.207" y="34.036" size="1.778" layer="21" rot="R90">10K Potentiometer</text>
 <text x="58.928" y="5.969" size="1.778" layer="21">ESP8266</text>
 <text x="45.72" y="11.176" size="1.778" layer="21" rot="R90">GAS SENSOR TX</text>
+<text x="71.882" y="28.448" size="1.778" layer="22" rot="MR270">TRANCEIVER - TX
+CAPSTONE SPRING 2017</text>
+<text x="66.294" y="9.398" size="1.778" layer="22" rot="MR270">Alec
+Arsalan
+Kam
+Noah</text>
 </plain>
 <libraries>
 <library name="Gas_Sensor_Lib_v1">
@@ -569,7 +575,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="48.514" y="5.613" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="42.647" y="0.635" size="1.27" layer="27"/>
 </element>
-<element name="U$2" library="Gas_Sensor_Lib_v1" package="C1206" value="470u" x="18.796" y="9.144" smashed="yes" rot="R90">
+<element name="U$2" library="Gas_Sensor_Lib_v1" package="C1206" value="10uF" x="18.796" y="9.144" smashed="yes" rot="R90">
 <attribute name="NAME" x="16.002" y="7.493" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="14.478" y="7.366" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -947,4 +953,10 @@ Please make sure your boards conform to these design rules.</description>
 </signals>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>

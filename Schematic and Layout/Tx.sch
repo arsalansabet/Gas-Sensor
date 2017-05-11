@@ -1080,7 +1080,7 @@ http://www.bccomponents.com/</description>
 <parts>
 <part name="U$1" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="LED_12V"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="U$2" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="470u"/>
+<part name="U$2" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="10uF"/>
 <part name="U$3" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="330"/>
 <part name="U$4" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="U$5" library="Gas_Sensor_Lib_v1" deviceset="DIODE_1206" device="" value="DIODE"/>
