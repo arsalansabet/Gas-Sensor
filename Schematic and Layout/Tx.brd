@@ -153,6 +153,9 @@ CAPSTONE SPRING 2017</text>
 Arsalan
 Kam
 Noah</text>
+<text x="42.7355" y="0.635" size="1.27" layer="21">LED_12V</text>
+<text x="35.179" y="30.988" size="1.27" layer="21" rot="R90">LED_5V</text>
+<text x="34.036" y="23.495" size="1.27" layer="21" rot="R180">LED_GAS</text>
 </plain>
 <libraries>
 <library name="Gas_Sensor_Lib_v1">
