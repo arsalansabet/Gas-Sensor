@@ -637,6 +637,24 @@ Please make sure your boards conform to these design rules.</description>
 </polygon>
 <contactref element="U$8" pad="2"/>
 <contactref element="U$21" pad="1"/>
+<via x="28.41625" y="40.16375" extent="1-16" drill="0.8" shape="square"/>
+<via x="34.29" y="35.8775" extent="1-16" drill="0.8" shape="square"/>
+<via x="29.5275" y="29.21" extent="1-16" drill="0.8" shape="square"/>
+<via x="21.74875" y="23.33625" extent="1-16" drill="0.8" shape="square"/>
+<via x="36.03625" y="3.01625" extent="1-16" drill="0.8" shape="square"/>
+<via x="22.38375" y="2.54" extent="1-16" drill="0.8" shape="square"/>
+<via x="10.63625" y="37.94125" extent="1-16" drill="0.8" shape="square"/>
+<via x="6.82625" y="1.74625" extent="1-16" drill="0.8" shape="square"/>
+<via x="6.19125" y="20.16125" extent="1-16" drill="0.8" shape="square"/>
+<via x="10.63625" y="31.27375" extent="1-16" drill="0.8" shape="square"/>
+<via x="3.4925" y="39.37" extent="1-16" drill="0.8" shape="square"/>
+<via x="14.12875" y="65.405" extent="1-16" drill="0.8" shape="square"/>
+<via x="1.27" y="65.0875" extent="1-16" drill="0.8" shape="square"/>
+<via x="34.6075" y="72.0725" extent="1-16" drill="0.8" shape="square"/>
+<via x="19.52625" y="78.58125" extent="1-16" drill="0.8" shape="square"/>
+<via x="31.115" y="69.05625" extent="1-16" drill="0.8" shape="square"/>
+<via x="40.48125" y="67.78625" extent="1-16" drill="0.8" shape="square"/>
+<via x="36.5125" y="78.89875" extent="1-16" drill="0.8" shape="square"/>
 </signal>
 <signal name="N$3">
 <contactref element="U$1" pad="3"/>

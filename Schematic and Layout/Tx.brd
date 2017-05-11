@@ -599,7 +599,7 @@ Please make sure your boards conform to these design rules.</description>
 </element>
 <element name="U$8" library="Gas_Sensor_Lib_v1" package="SOT223" value="5V_REG" x="46.101" y="53.086" smashed="yes" rot="R270">
 <attribute name="NAME" x="47.471" y="49.2242" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="52.3802" y="55.876" size="1.27" layer="27" rot="R270"/>
+<attribute name="VALUE" x="46.8035" y="50.9197" size="1.27" layer="27"/>
 </element>
 <element name="U$9" library="Gas_Sensor_Lib_v1" package="153CLV-0405" value="10uF" x="43.561" y="59.563" smashed="yes">
 <attribute name="NAME" x="35.479" y="61.916" size="1.27" layer="25"/>
@@ -716,6 +716,24 @@ Please make sure your boards conform to these design rules.</description>
 <vertex x="76.2" y="-0.254"/>
 <vertex x="0" y="0"/>
 </polygon>
+<via x="59.4995" y="39.6875" extent="1-16" drill="0.9" shape="square"/>
+<via x="70.5485" y="46.736" extent="1-16" drill="0.9" shape="square"/>
+<via x="57.277" y="27.3685" extent="1-16" drill="0.9" shape="square"/>
+<via x="62.357" y="2.413" extent="1-16" drill="0.9" shape="square"/>
+<via x="31.242" y="2.794" extent="1-16" drill="0.9" shape="square"/>
+<via x="13.0175" y="7.4295" extent="1-16" drill="0.9" shape="square"/>
+<via x="2.159" y="26.2255" extent="1-16" drill="0.9" shape="square"/>
+<via x="8.5725" y="25.4" extent="1-16" drill="0.9" shape="square"/>
+<via x="7.1755" y="48.7045" extent="1-16" drill="0.9" shape="square"/>
+<via x="14.605" y="60.8965" extent="1-16" drill="0.9" shape="square"/>
+<via x="48.9585" y="48.514" extent="1-16" drill="0.9" shape="square"/>
+<via x="16.256" y="48.387" extent="1-16" drill="0.9" shape="square"/>
+<via x="47.117" y="22.9235" extent="1-16" drill="0.9" shape="square"/>
+<via x="41.2115" y="22.6695" extent="1-16" drill="0.9" shape="square"/>
+<via x="38.227" y="60.706" extent="1-16" drill="0.9" shape="square"/>
+<via x="35.941" y="21.209" extent="1-16" drill="0.9" shape="square"/>
+<via x="23.0505" y="15.621" extent="1-16" drill="0.9" shape="square"/>
+<via x="2.4765" y="61.341" extent="1-16" drill="0.9" shape="square"/>
 </signal>
 <signal name="12V_IN">
 <contactref element="U$2" pad="1"/>
