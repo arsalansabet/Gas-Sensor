@@ -1378,6 +1378,18 @@ http://www.bccomponents.com/</description>
 <junction x="132.08" y="30.48"/>
 <label x="121.92" y="30.48" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$22" gate="G$1" pin="1"/>
+<wire x1="269.24" y1="129.54" x2="269.24" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="132.08" x2="281.94" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="U$14" gate="G$1" pin="E"/>
+<wire x1="281.94" y1="132.08" x2="281.94" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="U$24" gate="G$1" pin="1"/>
+<wire x1="281.94" y1="116.84" x2="289.56" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="116.84" x2="289.56" y2="114.3" width="0.1524" layer="91"/>
+<junction x="281.94" y="116.84"/>
+<label x="271.78" y="132.08" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$3" class="0">
 <segment>
@@ -1447,19 +1459,6 @@ http://www.bccomponents.com/</description>
 <pinref part="U$14" gate="G$1" pin="B"/>
 <wire x1="269.24" y1="111.76" x2="276.86" y2="111.76" width="0.1524" layer="91"/>
 <junction x="269.24" y="111.76"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="U$22" gate="G$1" pin="1"/>
-<wire x1="269.24" y1="129.54" x2="269.24" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="132.08" x2="281.94" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="U$14" gate="G$1" pin="E"/>
-<wire x1="281.94" y1="132.08" x2="281.94" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="U$24" gate="G$1" pin="1"/>
-<wire x1="281.94" y1="116.84" x2="289.56" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="289.56" y1="116.84" x2="289.56" y2="114.3" width="0.1524" layer="91"/>
-<junction x="281.94" y="116.84"/>
 </segment>
 </net>
 <net name="N$11" class="0">
