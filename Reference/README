@@ -1,3 +1,6 @@
 Libraries were taken from https://github.com/esp8266/Arduino
 Code was also modified from the above link.
 The .zip file in here is the version that we used for this project. I am including it here in case updates made to their site cause problems with our code compatibility
+
+Zip up the "ESP8266WiFi" folder and import it as a library in the Arduino IDE found here:
+Arduino-master\Arduino-master\libraries\ESP8266WiFi
