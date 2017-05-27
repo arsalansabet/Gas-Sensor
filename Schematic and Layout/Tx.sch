@@ -379,6 +379,19 @@ http://www.bccomponents.com/</description>
 <wire x1="-4.4" y1="-2.2" x2="4.4" y2="-2.2" width="0.127" layer="21"/>
 <text x="-7.4" y="2.5" size="1.27" layer="21">ESP ON     OFF</text>
 </package>
+<package name="SOD-323">
+<smd name="P$1" x="-1.1" y="0" dx="1.5" dy="1.5" layer="1"/>
+<smd name="P$2" x="1.1" y="0" dx="1.5" dy="1.5" layer="1"/>
+<wire x1="0.9" y1="-0.9" x2="-0.9" y2="-0.9" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="1.6" x2="0.3" y2="1.3" width="0.127" layer="21"/>
+<wire x1="0.3" y1="1.3" x2="-0.4" y2="1" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="1" x2="-0.4" y2="1.6" width="0.127" layer="21"/>
+<wire x1="0.3" y1="1.7" x2="0.3" y2="0.9" width="0.127" layer="21"/>
+<wire x1="0.3" y1="1.7" x2="0" y2="1.7" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="1.3" x2="-1.1" y2="1.3" width="0.127" layer="21"/>
+<wire x1="0.4" y1="1.3" x2="1.1" y2="1.3" width="0.127" layer="21"/>
+<wire x1="0.3" y1="0.9" x2="0.6" y2="0.9" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LED-PAD">
@@ -1069,6 +1082,22 @@ http://www.bccomponents.com/</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="DIODE_Z_3.3V">
+<gates>
+<gate name="G$1" symbol="LED-ZENER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOD-323">
+<connects>
+<connect gate="G$1" pin="HI" pad="P$1"/>
+<connect gate="G$1" pin="LO" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -1146,10 +1175,8 @@ http://www.bccomponents.com/</description>
 <part name="U$22" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="100K"/>
 <part name="U$23" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="U$24" library="Gas_Sensor_Lib_v1" deviceset="CAP" device="" value="1uF"/>
-<part name="U$25" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="?"/>
-<part name="U$26" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="?"/>
+<part name="U$25" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="U$27" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
-<part name="U$28" library="Gas_Sensor_Lib_v1" deviceset="DIODE_1206" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="U$29" library="Gas_Sensor_Lib_v1" deviceset="ESP8266" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
@@ -1157,6 +1184,7 @@ http://www.bccomponents.com/</description>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="U$31" library="Gas_Sensor_Lib_v1" deviceset="HEAT_SINK" device=""/>
 <part name="U$32" library="Gas_Sensor_Lib_v1" deviceset="SPDT" device=""/>
+<part name="U$28" library="Gas_Sensor_Lib_v1" deviceset="DIODE_Z_3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1199,9 +1227,7 @@ http://www.bccomponents.com/</description>
 <instance part="U$23" gate="G$1" x="264.16" y="111.76"/>
 <instance part="U$24" gate="G$1" x="289.56" y="111.76"/>
 <instance part="U$25" gate="G$1" x="281.94" y="93.98" rot="R90"/>
-<instance part="U$26" gate="G$1" x="281.94" y="73.66" rot="R90"/>
 <instance part="U$27" gate="G$1" x="297.18" y="83.82" rot="R180"/>
-<instance part="U$28" gate="G$1" x="281.94" y="58.42"/>
 <instance part="GND9" gate="1" x="281.94" y="45.72"/>
 <instance part="U$29" gate="G$1" x="327.66" y="68.58"/>
 <instance part="GND10" gate="1" x="314.96" y="45.72"/>
@@ -1209,6 +1235,7 @@ http://www.bccomponents.com/</description>
 <instance part="GND11" gate="1" x="187.96" y="22.86"/>
 <instance part="U$31" gate="G$1" x="66.04" y="119.38"/>
 <instance part="U$32" gate="G$1" x="332.74" y="109.22"/>
+<instance part="U$28" gate="G$1" x="281.94" y="58.42" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -1274,11 +1301,6 @@ http://www.bccomponents.com/</description>
 <wire x1="195.58" y1="96.52" x2="195.58" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND9" gate="1" pin="GND"/>
-<pinref part="U$28" gate="G$1" pin="LO"/>
-<wire x1="281.94" y1="48.26" x2="281.94" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$29" gate="G$1" pin="GND_0"/>
 <wire x1="320.04" y1="73.66" x2="314.96" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="314.96" y1="73.66" x2="314.96" y2="68.58" width="0.1524" layer="91"/>
@@ -1305,6 +1327,11 @@ http://www.bccomponents.com/</description>
 <wire x1="187.96" y1="27.94" x2="187.96" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="27.94" x2="187.96" y2="27.94" width="0.1524" layer="91"/>
 <junction x="187.96" y="27.94"/>
+</segment>
+<segment>
+<pinref part="GND9" gate="1" pin="GND"/>
+<pinref part="U$28" gate="G$1" pin="HI"/>
+<wire x1="281.94" y1="48.26" x2="281.94" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="12V_IN" class="0">
@@ -1509,22 +1536,15 @@ http://www.bccomponents.com/</description>
 <junction x="281.94" y="106.68"/>
 </segment>
 </net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="U$28" gate="G$1" pin="HI"/>
-<pinref part="U$26" gate="G$1" pin="1"/>
-<wire x1="281.94" y1="60.96" x2="281.94" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="U$26" gate="G$1" pin="2"/>
 <pinref part="U$25" gate="G$1" pin="1"/>
-<wire x1="281.94" y1="78.74" x2="281.94" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="U$27" gate="G$1" pin="2"/>
 <wire x1="281.94" y1="83.82" x2="281.94" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="83.82" x2="281.94" y2="83.82" width="0.1524" layer="91"/>
 <junction x="281.94" y="83.82"/>
+<pinref part="U$28" gate="G$1" pin="LO"/>
+<wire x1="281.94" y1="83.82" x2="281.94" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
