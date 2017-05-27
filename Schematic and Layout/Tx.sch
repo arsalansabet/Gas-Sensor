@@ -352,7 +352,7 @@ http://www.bccomponents.com/</description>
 <text x="-5.08" y="19.05" size="1.27" layer="21">2mm height</text>
 </package>
 <package name="POTENTIOMETER">
-<pad name="3_1" x="27.5" y="0" drill="1.1" shape="square"/>
+<pad name="3_1" x="27.5" y="1.27" drill="1.1" shape="square"/>
 <pad name="1_1" x="-27.5" y="1.25" drill="1.1" shape="square"/>
 <pad name="2_0" x="-27.5" y="-1.25" drill="1.1" shape="square"/>
 <pad name="2_1" x="-27.5" y="3.75" drill="1.1" shape="square"/>
@@ -368,6 +368,16 @@ http://www.bccomponents.com/</description>
 </package>
 <package name="THERMAL">
 <smd name="P$1" x="0" y="0" dx="12" dy="25" layer="1" rot="R270"/>
+</package>
+<package name="SPDT">
+<hole x="-4" y="0" drill="1"/>
+<hole x="4" y="0" drill="1"/>
+<pad name="IN" x="0" y="0" drill="0.8" shape="square"/>
+<pad name="B" x="2" y="0" drill="0.8" shape="square"/>
+<pad name="A" x="-2" y="0" drill="0.8" shape="square"/>
+<wire x1="4.4" y1="2.2" x2="-4.4" y2="2.2" width="0.127" layer="21"/>
+<wire x1="-4.4" y1="-2.2" x2="4.4" y2="-2.2" width="0.127" layer="21"/>
+<text x="-7.4" y="2.5" size="1.27" layer="21">ESP ON     OFF</text>
 </package>
 </packages>
 <symbols>
@@ -779,6 +789,15 @@ http://www.bccomponents.com/</description>
 <wire x1="5.08" y1="10.16" x2="7.62" y2="12.7" width="0.254" layer="94"/>
 <text x="0" y="-7.62" size="1.778" layer="94">Heat Sink</text>
 </symbol>
+<symbol name="SPDT">
+<pin name="A" x="-7.62" y="-7.62" visible="pin" length="middle" rot="R90"/>
+<pin name="B" x="7.62" y="-7.62" visible="pin" length="middle" rot="R90"/>
+<pin name="INPUT" x="0" y="-7.62" visible="pin" length="middle" rot="R90"/>
+<wire x1="-10.16" y1="-2.54" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="-10.16" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="LED_1206">
@@ -1033,6 +1052,23 @@ http://www.bccomponents.com/</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="SPDT">
+<gates>
+<gate name="G$1" symbol="SPDT" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="SPDT">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="INPUT" pad="IN"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -1120,6 +1156,7 @@ http://www.bccomponents.com/</description>
 <part name="U$30" library="Gas_Sensor_Lib_v1" deviceset="POTENTIOMETER" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="U$31" library="Gas_Sensor_Lib_v1" deviceset="HEAT_SINK" device=""/>
+<part name="U$32" library="Gas_Sensor_Lib_v1" deviceset="SPDT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1171,6 +1208,7 @@ http://www.bccomponents.com/</description>
 <instance part="U$30" gate="G$1" x="157.48" y="33.02"/>
 <instance part="GND11" gate="1" x="187.96" y="22.86"/>
 <instance part="U$31" gate="G$1" x="66.04" y="119.38"/>
+<instance part="U$32" gate="G$1" x="332.74" y="109.22"/>
 </instances>
 <busses>
 </busses>
@@ -1301,12 +1339,6 @@ http://www.bccomponents.com/</description>
 <junction x="111.76" y="147.32"/>
 <label x="83.82" y="182.88" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="U$29" gate="G$1" pin="VIN"/>
-<wire x1="320.04" y1="88.9" x2="314.96" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="314.96" y1="88.9" x2="314.96" y2="99.06" width="0.1524" layer="91"/>
-<label x="314.96" y="96.52" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -1389,6 +1421,12 @@ http://www.bccomponents.com/</description>
 <wire x1="289.56" y1="116.84" x2="289.56" y2="114.3" width="0.1524" layer="91"/>
 <junction x="281.94" y="116.84"/>
 <label x="271.78" y="132.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<label x="350.52" y="96.52" size="1.778" layer="95"/>
+<pinref part="U$32" gate="G$1" pin="INPUT"/>
+<wire x1="332.74" y1="101.6" x2="332.74" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="96.52" x2="355.6" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1516,6 +1554,16 @@ http://www.bccomponents.com/</description>
 <junction x="127" y="91.44"/>
 <pinref part="U$13" gate="G$1" pin="P$4"/>
 <wire x1="127" y1="76.2" x2="127" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ESP_VIN" class="0">
+<segment>
+<pinref part="U$29" gate="G$1" pin="VIN"/>
+<wire x1="320.04" y1="88.9" x2="314.96" y2="88.9" width="0.1524" layer="91"/>
+<label x="314.96" y="96.52" size="1.778" layer="95"/>
+<pinref part="U$32" gate="G$1" pin="A"/>
+<wire x1="314.96" y1="88.9" x2="314.96" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="101.6" x2="325.12" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

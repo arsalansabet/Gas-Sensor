@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.0025" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.00125" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -146,14 +146,14 @@
 <wire x1="0" y1="63.5" x2="0" y2="0" width="0" layer="20"/>
 <text x="5.207" y="34.036" size="1.778" layer="21" rot="R90">10K Potentiometer</text>
 <text x="58.928" y="5.969" size="1.778" layer="21">ESP8266</text>
-<text x="45.72" y="11.176" size="1.778" layer="21" rot="R90">GAS SENSOR TX</text>
-<text x="70.358" y="38.608" size="1.778" layer="22" rot="MR270">TRANCEIVER - TX
+<text x="45.11675" y="20.03425" size="1.778" layer="21" rot="R90">GAS SENSOR TX</text>
+<text x="70.358" y="38.608" size="1.778" layer="22" rot="MR270">TRANSCEIVER - TX
 CAPSTONE SPRING 2017</text>
 <text x="65.024" y="19.558" size="1.778" layer="22" rot="MR270">Alec
 Arsalan
 Kam
 Noah</text>
-<text x="42.7355" y="0.635" size="1.27" layer="21">LED_12V</text>
+<text x="48.03775" y="0.73025" size="1.27" layer="21" rot="R90">LED_12V</text>
 <text x="35.179" y="30.988" size="1.27" layer="21" rot="R90">LED_5V</text>
 <text x="34.036" y="23.495" size="1.27" layer="21" rot="R180">LED_GAS</text>
 </plain>
@@ -370,7 +370,7 @@ http://www.bccomponents.com/</description>
 <text x="-5.08" y="19.05" size="1.27" layer="21">2mm height</text>
 </package>
 <package name="POTENTIOMETER">
-<pad name="3_1" x="27.5" y="0" drill="1.1" shape="square"/>
+<pad name="3_1" x="27.5" y="1.27" drill="1.1" shape="square"/>
 <pad name="1_1" x="-27.5" y="1.25" drill="1.1" shape="square"/>
 <pad name="2_0" x="-27.5" y="-1.25" drill="1.1" shape="square"/>
 <pad name="2_1" x="-27.5" y="3.75" drill="1.1" shape="square"/>
@@ -386,6 +386,16 @@ http://www.bccomponents.com/</description>
 </package>
 <package name="THERMAL">
 <smd name="P$1" x="0" y="0" dx="12" dy="25" layer="1" rot="R270"/>
+</package>
+<package name="SPDT">
+<hole x="-4" y="0" drill="1"/>
+<hole x="4" y="0" drill="1"/>
+<pad name="IN" x="0" y="0" drill="0.8" shape="square"/>
+<pad name="B" x="2" y="0" drill="0.8" shape="square"/>
+<pad name="A" x="-2" y="0" drill="0.8" shape="square"/>
+<wire x1="4.4" y1="2.2" x2="-4.4" y2="2.2" width="0.127" layer="21"/>
+<wire x1="-4.4" y1="-2.2" x2="4.4" y2="-2.2" width="0.127" layer="21"/>
+<text x="-7.4" y="2.5" size="1.27" layer="21">ESP ON     OFF</text>
 </package>
 </packages>
 </library>
@@ -574,9 +584,9 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$1" library="Gas_Sensor_Lib_v1" package="LED_1206" value="LED_12V" x="46.736" y="4.851" smashed="yes" rot="R270">
-<attribute name="NAME" x="48.514" y="5.613" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="42.647" y="0.635" size="1.27" layer="27"/>
+<element name="U$1" library="Gas_Sensor_Lib_v1" package="LED_1206" value="LED_12V" x="43.18" y="3.327" smashed="yes" rot="R270">
+<attribute name="NAME" x="44.958" y="4.089" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="49.911" y="0.76875" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="U$2" library="Gas_Sensor_Lib_v1" package="C1206" value="10uF" x="18.796" y="11.938" smashed="yes" rot="R90">
 <attribute name="NAME" x="16.002" y="10.287" size="1.27" layer="25" rot="R90"/>
@@ -586,9 +596,9 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="38.862" y="15.113" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="42.164" y="14.478" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="U$4" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="38.1" y="3.556" smashed="yes">
-<attribute name="NAME" x="36.83" y="0.762" size="1.27" layer="25"/>
-<attribute name="VALUE" x="34.163" y="0.762" size="1.27" layer="27"/>
+<element name="U$4" library="Gas_Sensor_Lib_v1" package="R1206" value="1K" x="36.86175" y="3.1115" smashed="yes">
+<attribute name="NAME" x="35.59175" y="0.3175" size="1.27" layer="25"/>
+<attribute name="VALUE" x="32.92475" y="0.3175" size="1.27" layer="27"/>
 </element>
 <element name="U$5" library="Gas_Sensor_Lib_v1" package="DIDOE_1206" value="DIODE" x="39.624" y="7.874" smashed="yes">
 <attribute name="NAME" x="38.354" y="9.144" size="1.27" layer="25"/>
@@ -684,6 +694,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="U$29" library="Gas_Sensor_Lib_v1" package="ESP" value="ESP8266" x="62.865" y="24.384" smashed="yes"/>
 <element name="U$30" library="Gas_Sensor_Lib_v1" package="POTENTIOMETER" value="POTENTIOMETER" x="5.842" y="31.496" smashed="yes" rot="R90"/>
 <element name="U$31" library="Gas_Sensor_Lib_v1" package="THERMAL" value="HEAT_SINK" x="62.738" y="55.753"/>
+<element name="U$32" library="Gas_Sensor_Lib_v1" package="SPDT" value="SPDT" x="47.879" y="13.208" rot="R90"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -757,23 +768,20 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U$1" pad="1"/>
 <contactref element="U$8" pad="3"/>
 <contactref element="U$10" pad="+"/>
-<contactref element="U$29" pad="VIN"/>
-<wire x1="44.323" y1="7.874" x2="46.736" y2="7.874" width="1.27" layer="1"/>
-<wire x1="44.323" y1="7.874" x2="41.046" y2="7.874" width="1.27" layer="1"/>
-<wire x1="46.736" y1="6.604" x2="46.736" y2="7.874" width="1.27" layer="1"/>
-<wire x1="51.435" y1="6.604" x2="46.736" y2="6.604" width="1.27" layer="1"/>
-<wire x1="46.736" y1="6.604" x2="46.736" y2="6.273" width="1.27" layer="1"/>
+<wire x1="41.046" y1="7.874" x2="44.323" y2="7.874" width="1.27" layer="1"/>
 <wire x1="42.8752" y1="46.5728" x2="42.966" y2="45.339" width="1.4224" layer="1"/>
 <wire x1="42.8752" y1="46.5728" x2="43.0022" y2="50.7746" width="1.4224" layer="1"/>
 <wire x1="42.966" y1="45.339" x2="42.966" y2="39.497" width="1.4224" layer="1"/>
 <wire x1="42.966" y1="39.497" x2="44.831" y2="39.497" width="1.4224" layer="1"/>
 <wire x1="44.831" y1="39.497" x2="44.831" y2="7.874" width="1.4224" layer="1"/>
 <wire x1="44.831" y1="7.874" x2="44.323" y2="7.874" width="1.4224" layer="1"/>
+<wire x1="44.323" y1="7.874" x2="43.18" y2="7.874" width="1.4224" layer="1"/>
+<wire x1="43.18" y1="7.874" x2="43.18" y2="4.749" width="1.4224" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="U$1" pad="2"/>
 <contactref element="U$4" pad="2"/>
-<wire x1="46.736" y1="3.429" x2="39.522" y2="3.556" width="1.27" layer="1"/>
+<wire x1="43.18" y1="1.905" x2="38.28375" y2="3.1115" width="1.4224" layer="1"/>
 </signal>
 <signal name="5V">
 <contactref element="U$8" pad="2"/>
@@ -809,11 +817,11 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="9.592" y1="11.43" x2="9.592" y2="3.996" width="1.27" layer="16"/>
 <wire x1="29.34" y1="11.43" x2="23.876" y2="11.43" width="1.27" layer="1"/>
 <wire x1="4.592" y1="3.996" x2="4.592" y2="11.43" width="1.27" layer="16"/>
-<wire x1="4.592" y1="11.43" x2="9.592" y2="11.43" width="1.27" layer="16"/>
+<wire x1="4.699" y1="11.43" x2="9.592" y2="11.43" width="1.27" layer="16"/>
 <contactref element="U$31" pad="P$1"/>
 <wire x1="49.2" y1="53.086" x2="43.0022" y2="53.086" width="1.4224" layer="1"/>
 <wire x1="59.436" y1="52.959" x2="62.738" y2="55.753" width="3.81" layer="1" curve="90"/>
-<wire x1="38.354" y1="30.836" x2="38.354" y2="18.288" width="1.4224" layer="1"/>
+<wire x1="38.354" y1="18.288" x2="38.354" y2="30.836" width="1.4224" layer="1"/>
 <wire x1="38.354" y1="18.288" x2="33.807" y2="18.288" width="1.4224" layer="1"/>
 <wire x1="38.354" y1="30.836" x2="38.354" y2="28.829" width="0.6096" layer="1"/>
 <wire x1="38.354" y1="28.829" x2="33.334" y2="28.829" width="0.6096" layer="1"/>
@@ -830,7 +838,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U$24" pad="1"/>
 <wire x1="19.746" y1="30.142" x2="19.964" y2="30.142" width="0.8128" layer="1"/>
 <wire x1="19.964" y1="30.142" x2="19.964" y2="27.686" width="0.8128" layer="1"/>
-<wire x1="24.892" y1="31.62" x2="24.892" y2="30.142" width="0.8128" layer="1"/>
+<wire x1="24.892" y1="30.142" x2="24.892" y2="31.62" width="0.8128" layer="1"/>
 <wire x1="22.352" y1="30.142" x2="24.892" y2="30.142" width="0.8128" layer="1"/>
 <wire x1="22.352" y1="30.142" x2="19.746" y2="30.142" width="0.8128" layer="1"/>
 <wire x1="4.592" y1="11.43" x2="4.699" y2="11.43" width="1.27" layer="16"/>
@@ -838,6 +846,12 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="4.699" y1="29.7815" x2="22.0345" y2="32.131" width="1.27" layer="16"/>
 <via x="22.0345" y="32.131" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="22.0345" y1="32.131" x2="22.352" y2="30.142" width="0.8128" layer="1"/>
+<contactref element="U$32" pad="IN"/>
+<wire x1="47.879" y1="13.208" x2="41.37025" y2="13.208" width="1.4224" layer="16"/>
+<wire x1="41.37025" y1="13.208" x2="41.37025" y2="18.25625" width="1.4224" layer="16"/>
+<via x="41.37025" y="18.25625" extent="1-16" drill="1.1" shape="square"/>
+<wire x1="41.37025" y1="18.25625" x2="38.354" y2="18.25625" width="1.4224" layer="1"/>
+<wire x1="38.354" y1="18.25625" x2="38.354" y2="18.288" width="1.4224" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="U$11" pad="2"/>
@@ -972,6 +986,17 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="31.496" y1="33.274" x2="30.734" y2="33.274" width="0.6096" layer="1"/>
 <wire x1="30.734" y1="33.274" x2="30.734" y2="27.559" width="0.6096" layer="1"/>
 <wire x1="30.734" y1="27.559" x2="28.134" y2="27.559" width="0.6096" layer="1"/>
+</signal>
+<signal name="ESP_VIN">
+<contactref element="U$29" pad="VIN"/>
+<wire x1="51.435" y1="6.63575" x2="51.435" y2="6.604" width="1.4224" layer="1"/>
+<contactref element="U$32" pad="A"/>
+<wire x1="49.4712" y1="9.8675125" x2="49.4665" y2="9.8722125" width="1.4224" layer="16"/>
+<wire x1="49.4665" y1="9.8722125" x2="49.4665" y2="11.2395" width="1.4224" layer="16"/>
+<wire x1="51.435" y1="6.604" x2="49.4712" y2="6.604" width="1.4224" layer="16"/>
+<wire x1="49.4712" y1="6.604" x2="49.4712" y2="9.8675125" width="1.4224" layer="16"/>
+<wire x1="49.4665" y1="11.2395" x2="47.879" y2="11.2395" width="1.4224" layer="16"/>
+<wire x1="47.879" y1="11.2395" x2="47.879" y2="11.208" width="1.4224" layer="16"/>
 </signal>
 </signals>
 <errors>

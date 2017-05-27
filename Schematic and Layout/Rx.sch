@@ -327,6 +327,47 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="-1.5875" y1="1.27" x2="1.5875" y2="1.27" width="0.127" layer="21"/>
 <wire x1="1.5875" y1="-1.27" x2="-1.5875" y2="-1.27" width="0.127" layer="21"/>
 </package>
+<package name="SOT223">
+<description>&lt;b&gt;SOT-223&lt;/b&gt;</description>
+<wire x1="3.2766" y1="1.778" x2="3.2766" y2="-1.778" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="-1.778" x2="-3.2766" y2="1.778" width="0.2032" layer="21"/>
+<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="4" x="0" y="3.099" dx="3.8" dy="2.2" layer="1"/>
+<text x="-2.64" y="4.7508" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.79" y="6.2792" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="153CLV-0405">
+<description>&lt;b&gt;Aluminum electrolytic capacitors&lt;/b&gt;&lt;p&gt;
+SMD (Chip) Long Life Vertical 153 CLV&lt;p&gt;
+http://www.bccomponents.com/</description>
+<wire x1="1.25" y1="-2.15" x2="-2.15" y2="-2.15" width="0.2032" layer="21"/>
+<wire x1="-2.15" y1="-2.15" x2="-2.15" y2="-1.1" width="0.2032" layer="21"/>
+<wire x1="-2.15" y1="1.1" x2="-2.15" y2="2.15" width="0.2032" layer="21"/>
+<wire x1="-2.15" y1="2.15" x2="1.25" y2="2.15" width="0.2032" layer="21"/>
+<wire x1="2.15" y1="1.25" x2="2.15" y2="1.1" width="0.2032" layer="21"/>
+<wire x1="2.15" y1="-1.05" x2="2.15" y2="-1.25" width="0.2032" layer="21"/>
+<wire x1="2.15" y1="-1.25" x2="1.25" y2="-2.15" width="0.2032" layer="21"/>
+<wire x1="1.25" y1="2.15" x2="2.15" y2="1.25" width="0.2032" layer="21"/>
+<smd name="+" x="2.5" y="0" dx="3.25" dy="1.6" layer="1"/>
+<smd name="-" x="-2.5" y="0" dx="3.25" dy="1.6" layer="1"/>
+<text x="-2.24" y="2.48" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.275" y="-3.735" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="4.5" y1="2.5" x2="4.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="4" y1="2" x2="5" y2="2" width="0.127" layer="21"/>
+<wire x1="-5" y1="2" x2="-4" y2="2" width="0.127" layer="21"/>
+</package>
+<package name="SPDT">
+<hole x="-4" y="0" drill="1"/>
+<hole x="4" y="0" drill="1"/>
+<pad name="IN" x="0" y="0" drill="0.8" shape="square"/>
+<pad name="B" x="2" y="0" drill="0.8" shape="square"/>
+<pad name="A" x="-2" y="0" drill="0.8" shape="square"/>
+<wire x1="4.4" y1="2.2" x2="-4.4" y2="2.2" width="0.127" layer="21"/>
+<wire x1="-4.4" y1="-2.2" x2="4.4" y2="-2.2" width="0.127" layer="21"/>
+<text x="-7.4" y="2.5" size="1.27" layer="21">ESP ON     OFF</text>
+</package>
 </packages>
 <symbols>
 <symbol name="NMOS-FET-E">
@@ -535,6 +576,37 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <wire x1="1.27" y1="-2.54" x2="1.27" y2="-1.905" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="-2.54" x2="-1.27" y2="-3.175" width="0.254" layer="94"/>
 </symbol>
+<symbol name="5V_REG">
+<pin name="GROUND" x="-7.62" y="-10.16" length="middle" rot="R90"/>
+<pin name="OUT" x="0" y="-10.16" length="middle" rot="R90"/>
+<pin name="IN" x="7.62" y="-10.16" length="middle" rot="R90"/>
+<pin name="TAB" x="0" y="15.24" length="middle" rot="R270"/>
+<wire x1="-10.16" y1="-5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="CPOL">
+<wire x1="-1.524" y1="-0.889" x2="1.524" y2="-0.889" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-0.889" x2="1.524" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0" x2="-1.524" y2="-0.889" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0" x2="1.524" y2="0" width="0.254" layer="94"/>
+<text x="1.143" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
+<text x="-0.5842" y="0.4064" size="1.27" layer="94" rot="R90">+</text>
+<text x="1.143" y="-4.5974" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-1.651" y1="-2.54" x2="1.651" y2="-1.651" layer="94"/>
+<pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="+" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="SPDT">
+<pin name="A" x="-7.62" y="-7.62" visible="pin" length="middle" rot="R90"/>
+<pin name="B" x="7.62" y="-7.62" visible="pin" length="middle" rot="R90"/>
+<pin name="INPUT" x="0" y="-7.62" visible="pin" length="middle" rot="R90"/>
+<wire x1="-10.16" y1="-2.54" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="-10.16" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="NMOS">
@@ -707,6 +779,57 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 </device>
 </devices>
 </deviceset>
+<deviceset name="5V_REG">
+<gates>
+<gate name="G$1" symbol="5V_REG" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="SOT223">
+<connects>
+<connect gate="G$1" pin="GROUND" pad="1"/>
+<connect gate="G$1" pin="IN" pad="3"/>
+<connect gate="G$1" pin="OUT" pad="2"/>
+<connect gate="G$1" pin="TAB" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CAP_POL">
+<gates>
+<gate name="G$1" symbol="CPOL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="153CLV-0405">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPDT">
+<gates>
+<gate name="G$1" symbol="SPDT" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="SPDT">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="INPUT" pad="IN"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -778,6 +901,14 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="U$19" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="OUT_LED"/>
 <part name="U$21" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="U$22" library="Gas_Sensor_Lib_v1" deviceset="5V_REG" device=""/>
+<part name="U$23" library="Gas_Sensor_Lib_v1" deviceset="CAP_POL" device="" value="10uF"/>
+<part name="U$24" library="Gas_Sensor_Lib_v1" deviceset="CAP_POL" device="" value="10uF"/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="U$25" library="Gas_Sensor_Lib_v1" deviceset="LED_1206" device="" value="LED_5V"/>
+<part name="U$26" library="Gas_Sensor_Lib_v1" deviceset="RES" device="" value="1K"/>
+<part name="U$27" library="Gas_Sensor_Lib_v1" deviceset="SPDT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -810,6 +941,14 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <instance part="U$19" gate="G$1" x="63.5" y="20.32"/>
 <instance part="U$21" gate="G$1" x="63.5" y="7.62" rot="R90"/>
 <instance part="GND5" gate="1" x="63.5" y="-2.54"/>
+<instance part="U$22" gate="G$1" x="-25.4" y="12.7"/>
+<instance part="U$23" gate="G$1" x="-25.4" y="-17.78"/>
+<instance part="U$24" gate="G$1" x="-17.78" y="-5.08"/>
+<instance part="GND6" gate="1" x="-25.4" y="-38.1"/>
+<instance part="GND7" gate="1" x="-33.02" y="-5.08"/>
+<instance part="U$25" gate="G$1" x="-43.18" y="-17.78"/>
+<instance part="U$26" gate="G$1" x="-43.18" y="-30.48" rot="R90"/>
+<instance part="U$27" gate="G$1" x="7.62" y="-15.24"/>
 </instances>
 <busses>
 </busses>
@@ -890,6 +1029,22 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <pinref part="U$21" gate="G$1" pin="1"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="63.5" y1="2.54" x2="63.5" y2="0" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND6" gate="1" pin="GND"/>
+<pinref part="U$23" gate="G$1" pin="-"/>
+<wire x1="-25.4" y1="-22.86" x2="-25.4" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="U$26" gate="G$1" pin="1"/>
+<wire x1="-43.18" y1="-35.56" x2="-25.4" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="-25.4" y="-35.56"/>
+<pinref part="U$24" gate="G$1" pin="-"/>
+<wire x1="-17.78" y1="-10.16" x2="-17.78" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-35.56" x2="-25.4" y2="-35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$22" gate="G$1" pin="GROUND"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="-33.02" y1="2.54" x2="-33.02" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1008,11 +1163,14 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <junction x="-25.4" y="60.96"/>
 <wire x1="-25.4" y1="60.96" x2="-25.4" y2="68.58" width="0.1524" layer="91"/>
 <label x="-25.4" y="68.58" size="1.778" layer="95"/>
-<pinref part="U$9" gate="G$1" pin="VIN"/>
-<wire x1="15.24" y1="15.24" x2="15.24" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="5.08" x2="-10.16" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="-10.16" y1="5.08" x2="-10.16" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="0" x2="-10.16" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="60.96" x2="-10.16" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U$24" gate="G$1" pin="+"/>
+<pinref part="U$22" gate="G$1" pin="IN"/>
+<wire x1="-17.78" y1="2.54" x2="-17.78" y2="0" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="0" x2="-17.78" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="0" x2="-17.78" y2="0" width="0.1524" layer="91"/>
+<junction x="-17.78" y="0"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="2"/>
@@ -1042,6 +1200,45 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <pinref part="U$19" gate="G$1" pin="LO"/>
 <pinref part="U$21" gate="G$1" pin="2"/>
 <wire x1="63.5" y1="15.24" x2="63.5" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<pinref part="U$22" gate="G$1" pin="OUT"/>
+<pinref part="U$23" gate="G$1" pin="+"/>
+<wire x1="-25.4" y1="2.54" x2="-25.4" y2="-10.16" width="0.1524" layer="91"/>
+<label x="-40.64" y="-7.62" size="1.778" layer="95" rot="R180"/>
+<pinref part="U$22" gate="G$1" pin="TAB"/>
+<wire x1="-25.4" y1="-10.16" x2="-25.4" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="27.94" x2="-43.18" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="27.94" x2="-43.18" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="-10.16" x2="-25.4" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="-25.4" y="-10.16"/>
+<pinref part="U$25" gate="G$1" pin="HI"/>
+<wire x1="-43.18" y1="-10.16" x2="-43.18" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="-43.18" y="-10.16"/>
+<wire x1="-43.18" y1="-10.16" x2="-53.34" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="-10.16" x2="-53.34" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="-43.18" x2="7.62" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="U$27" gate="G$1" pin="INPUT"/>
+<wire x1="7.62" y1="-43.18" x2="7.62" y2="-22.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="U$25" gate="G$1" pin="LO"/>
+<pinref part="U$26" gate="G$1" pin="2"/>
+<wire x1="-43.18" y1="-22.86" x2="-43.18" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="U$27" gate="G$1" pin="A"/>
+<wire x1="0" y1="-22.86" x2="-5.08" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-22.86" x2="-5.08" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="U$9" gate="G$1" pin="VIN"/>
+<wire x1="-5.08" y1="-2.54" x2="15.24" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="-2.54" x2="15.24" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
