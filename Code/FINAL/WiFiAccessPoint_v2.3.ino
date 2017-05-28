@@ -65,7 +65,7 @@ void setup() {
   Serial.println();
   Serial.print("Configuring access point...\n");
 
-  // Read SSID and Password and connect to gas sensor WiFi 
+  // Read SSID and Password strings and establish gas sensor WiFi AP 
   WiFi.softAP(ssid, password);
  
 
