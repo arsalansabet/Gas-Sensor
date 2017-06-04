@@ -34,37 +34,16 @@ void setup() {
   WiFi.persistent(false);     //These 3 lines are a required work-around
   WiFi.mode(WIFI_OFF);    //otherwise the module will not reconnect
   WiFi.mode(WIFI_STA);    //if it gets disconnected
+  // Connect to the actuator's a WiFi network with SSID and Password
   WiFi.begin("Gas_Sensor", "eceCapstone");
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
-  // Connect to the actuator's a WiFi network with SSID and Password
-  /*WiFiMulti.addAP("Gas_Sensor", "eceCapstone");
-
-    Serial.println();
-    Serial.println();
-    Serial.print("Wait for WiFi... ");
-
-    // Loop waiting until WiFi is connected
-    while(WiFiMulti.run() != WL_CONNECTED) {
-      Serial.print(".");
-      delay(500);
-    }
-
-    // Display WiFi connected and IP address
-    Serial.println("");
-    Serial.println("WiFi connected");
-    Serial.println("IP address: ");
-    Serial.println(WiFi.localIP());*/
 
   delay(500);
 
-  // Set GPIO4 as an output
-  //pinMode(4, OUTPUT);
-  // Initialize GPIO4 as logic "0" to make sure the actuator isn't triggered during power up
-  //digitalWrite(4, 0);
   // Set GPIO4 as input to detect gas sensor logic level
   pinMode(4, INPUT);
   delay(50);
